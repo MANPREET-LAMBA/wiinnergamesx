@@ -1,0 +1,170 @@
+import { useState } from "react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import logo from "./photo/Group 64 (1)_imgupscaler.ai_General_16K.jpg";
+
+export default function Navbarx() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+
+  const menuItems = [
+    {
+      label: "Investing ▸" , href: "/services/investment",
+      submenu: [
+        { name: "Long-Term", href: "/services/investment" },
+        { name: "Wealth Creation", href: "/services/investment" },
+        { name: "Multi-Baggers", href: "/services/investment" },
+        { name: "Positional Investing", href: "/services/investment" },
+
+      ],
+    },
+    {
+      label: "Trading ▸",href: "/services/trading",
+      submenu: [
+        { name: "Short Term", href: "/services/trading" },
+        { name: "Swing Trading", href: "/services/trading" },
+        { name: "Intraday", href: "/services/trading" },
+        { name: "BTST", href: "/services/investment" },
+        
+      ],
+    },
+    
+    {
+      label: "FnO ▸",href: "/services/forex/gold",
+      submenu: [
+        { name: "Futures", href: "/services/forex/gold" },
+        { name: "Options", href: "/services/forex/currency" },
+        { name: "Positional Investing", href: "/services/forex/crude" },
+      ],
+    },
+    { label: "Algo Trading", href: "/services/algo" ,
+    submenu: [
+        { name: "Automatic signals - index", href: "/services/forex/gold" },
+        { name: "Automatic signals - Forex", href: "/services/forex/currency" },
+        { name: "Automatic signals - Commodoties ", href: "/services/forex/crude" },
+         { name: "Automatic signals - Crypto ", href: "/services/forex/crude" },
+      ]},
+    {
+      label: "Learning ▸",href: "/services/education",
+      submenu: [
+        { name: "Fundamentals", href: "/services/education" },
+        { name: "Prop Level", href: "/services/education" },
+        { name: "RA Certification", href: "/services/education" },
+      ],
+    },
+    
+  ];
+
+  return (
+    <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-white relative">
+      {/* Logo */}
+      <div className="text-2xl font-bold text-indigo-900">
+        <img className="w-56 lg:w-11/12  xl:h-16 rounded-xl h-16 lg:h-24" src={logo} alt="Logo" />
+      </div>
+
+      {/* Hamburger Icon (mobile & tablet) */}
+      <div className="lg:hidden">
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="text-indigo-900"
+        >
+          {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}
+        </button>
+      </div>
+
+      {/* Navigation */}
+      <ul
+        className={`
+          flex-col lg:flex-row lg:flex
+          absolute lg:static top-full left-0 w-full lg:w-auto
+          bg-white lg:bg-transparent shadow-md lg:shadow-none
+          gap-4 lg:gap-6 text-gray-700 font-playfair font-semibold lg:text-lg xl:text-xl
+          transition-all duration-300 ease-in-out
+          z-50
+          ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}
+        `}
+      >
+        <a href="/"><li className="hover:text-indigo-600">Home</li></a>
+
+        {/* Our Services */}
+        <li
+          className="relative cursor-pointer select-none"
+          onMouseEnter={() => setIsDropdownOpen(true)}
+        >
+          <div
+            className="flex justify-between items-center lg:inline-block"
+            onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+          >
+            <span className="flex items-center">Our Services</span>
+            <span className="lg:hidden">
+              {isMobileServicesOpen ? <ChevronUp /> : <ChevronDown />}
+            </span>
+          </div>
+
+          {/* Desktop Dropdown */}
+          {isDropdownOpen && (
+            <ul
+              onMouseLeave={() => {
+                setIsDropdownOpen(false);
+                setActiveSubmenu(null);
+              }}
+              className="absolute left-0 top-full mt-2 bg-slate-600 bg-opacity-90 text-white shadow-lg rounded-lg py-2 w-56 hidden lg:block"
+            >
+              {menuItems.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="relative px-4 py-2 hover:bg-indigo-500"
+                  onMouseEnter={() => setActiveSubmenu(item.label)}
+                  onMouseLeave={() => setActiveSubmenu(null)}
+                >
+                  <a href={item.href || "#"}>{item.label}</a>
+                  {item.submenu &&
+                    activeSubmenu === item.label && (
+                      <ul className="absolute left-full top-0 ml-1 bg-slate-700 rounded-lg py-2 w-48 shadow-lg">
+                        {item.submenu.map((sub, i) => (
+                          <li key={i} className="px-4 py-2 hover:bg-indigo-400">
+                            <a href={sub.href}>{sub.name}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {/* Mobile Dropdown */}
+          {isMobileServicesOpen && (
+            <ul className="lg:hidden bg-gray-100 rounded-lg mt-2 ml-2 p-2 text-base space-y-2">
+              {menuItems.map((item, idx) => (
+                <li key={idx}>
+                  <p className="font-semibold">{item.label.replace(" ▸", "")}</p>
+                  {item.submenu && (
+                    <ul className="ml-4 space-y-1 text-gray-600">
+                      {item.submenu.map((sub, i) => (
+                        <li key={i}>
+                          <a href={sub.href}>{sub.name}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {!item.submenu && (
+                    <a href={item.href} className="text-gray-700">
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+
+        <a href="/blogs"><li className="hover:text-indigo-600">Blog</li></a>
+        {/* <a href="#"><li className="hover:text-indigo-600">About Us</li></a> */}
+        <a href="#"><li className="hover:text-indigo-600">Disclaimer</li></a>
+        <a href="#"><li className="hover:text-indigo-600">Contact Us</li></a>
+      </ul>
+    </nav>
+  );
+}

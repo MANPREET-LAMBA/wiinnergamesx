@@ -1,25 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { FaRocket, FaChartLine, FaGraduationCap, FaStar } from "react-icons/fa";
+import Navbarx from "./components/Navbarx";
+import Herosection from "./components/Herosection";
+import Join from "./components/Join";
+import Wealth from "./components/Wealth";
+import Algo from "./components/Algo";
+import Learning from "./components/Learning";
+import Review from "./components/Review";
+import Footer from "./components/Footer";
+import Partner from "./components/Partner";
+
+import telegram from "./components/photo/telegram.png"
+import youtubes from "./components/photo/youtube.png"
+import whatsapp from "./components/photo/social.png"
+import instagrams from "./components/photo/twitter.png"
+import Aboutus from "./components/Aboutus";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-sans bg-white text-gray-800 ">
+
+     <div className="flex justify-end sticky top-[50%] lg:top-1/3  z-50">
+       <div className=" absolute   z-30 flex flex-col gap-5 md:gap-7 rounded-l-xl textblurx bg-secondary py-4 px-2 md:p-5 ">
+        <img className="w-[4vh] md:w-[3vw] " src={instagrams}/>
+        <img className="w-[4vh] md:w-[3vw] " src={telegram}/>
+        <img className="w-[4vh] md:w-[3vw] " src={whatsapp}/>
+        <img className="w-[4vh] md:w-[3vw] " src={youtubes}/>
+      </div>
+     
+     <div className=" absolute   z-30 flex flex-col gap-5 md:gap-7 rounded-l-xl textblurx bg-secondary py-4 px-2 md:p-5 ">
+        <img className="w-[4vh] md:w-[3vw] " src={instagrams}/>
+        <img className="w-[4vh] md:w-[3vw] " src={telegram}/>
+        <img className="w-[4vh] md:w-[3vw] " src={whatsapp}/>
+        <img className="w-[4vh] md:w-[3vw] " src={youtubes}/>
+      </div>
+      
+      <div className=" absolute   z-30 flex flex-col gap-5 md:gap-7 rounded-l-xl  bg-secondary py-4 px-2 md:p-5 ">
+        <img className="w-[4vh] md:w-[3vw] " src={instagrams}/>
+        <img className="w-[4vh] md:w-[3vw] " src={telegram}/>
+        <img className="w-[4vh] md:w-[3vw] " src={whatsapp}/>
+        <img className="w-[4vh] md:w-[3vw] " src={youtubes}/>
+      </div>
+     </div>
+      {/* Navbar 
+      <Navbarx /> */}
+
+      {/* Hero Section */}
+      <Herosection />
+        <Aboutus/>
+      {/* Why Join Us */}
+      <Join />
+
+      {/* Wealth Creation */}
+      {/* <Wealth /> */}
+
+      {/* Algo Trading */}
+      <Algo />
+
+      {/* Learning */}
+      {/* <Learning /> */}
+
+      {/* Reviews */}
+      <Review />
+
+      {/* Partners */}
+      <Partner/>
+
+      {/* <Footer /> */}
     </div>
   );
 }
 
-export default App;
+
+  export default App;
