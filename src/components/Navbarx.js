@@ -57,10 +57,10 @@ export default function Navbarx() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-white relative">
+    <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-black relative">
       {/* Logo */}
       <div className="text-2xl font-bold text-indigo-900">
-        <img className="w-56 lg:w-11/12  xl:h-16 rounded-xl h-16 lg:h-24" src={logo} alt="Logo" />
+        <img className="w-56 lg:w-11/12  xl:h-24 rounded-xl h-16 lg:h-24" src={logo} alt="Logo" />
       </div>
 
       {/* Hamburger Icon (mobile & tablet) */}
@@ -79,7 +79,7 @@ export default function Navbarx() {
           flex-col lg:flex-row lg:flex
           absolute lg:static top-full left-0 w-full lg:w-auto
           bg-white lg:bg-transparent shadow-md lg:shadow-none
-          gap-4 lg:gap-6 text-gray-700 font-playfair font-semibold lg:text-lg xl:text-xl
+          gap-4 lg:gap-6 text-yellow-400 font-playfair font-semibold lg:text-lg xl:text-2xl
           transition-all duration-300 ease-in-out
           z-50
           ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}

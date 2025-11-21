@@ -1,3 +1,4 @@
+import Tradingsheet from "../perform/Tradingsheet";
 import ServiceCards from "./ServiceCards";
 
 export default function Trading() {
@@ -27,7 +28,7 @@ export default function Trading() {
   ];
 
   return (
-    <div className="text-center h-fit md:h-screen">
+    <div className="text-center h-fit ">
       <h1 className="text-4xl md:text-7xl font-playfair text-primary font-bold text-center pt-5">
         TRDAING PLAN
       </h1>
@@ -41,6 +42,10 @@ export default function Trading() {
           />
         ))}
       </div>
+
+      
+        <Tradingsheet/>
+      
     </div>
   );
 }

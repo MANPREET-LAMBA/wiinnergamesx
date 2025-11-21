@@ -1,3 +1,4 @@
+import Sheet from "../perform/Sheet";
 import ServiceCards from "./ServiceCards";
 
 export default function Investment() {
@@ -43,11 +44,12 @@ export default function Investment() {
       "Entry and Exit Will Be There",
       "Portfolio Advisory"
     ]
-  }
+  },
+  
   ];
 
   return (
-    <div className="text-center">
+    <div className="text-center ">
       <h1 className=" text-4xl md:text-7xl font-playfair text-primary font-bold text-center pt-5">
         INVESTMENT PLAN
       </h1>
@@ -61,6 +63,12 @@ export default function Investment() {
           />
         ))}
       </div>
+
+     
+      <Sheet/>
+     
+
+      
     </div>
   );
 }

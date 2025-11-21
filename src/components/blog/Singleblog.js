@@ -6,11 +6,13 @@ export default function Singleblog() {
   const { id } = useParams(); // get id from URL
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
-
+const apiUrl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/api/blogs/${id}`);
+        console.log(`${apiUrl}blogs/${id}`);
+        
+        const res = await axios.get(`${apiUrl}api/blogs/${id}`);
         setBlog(res.data);
       } catch (error) {
         console.error("Error fetching blog:", error);

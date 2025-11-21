@@ -4,11 +4,14 @@ import Footer from "./Footer"
 
 export default function Layput() {
     return (
-        <div>
-           <Navbarx/>
-            <Outlet />
-            <Footer/>
-        </div>
+      <div className="min-h-screen flex flex-col">
+  <Navbarx />
+  <main className="flex-1">
+    <Outlet />
+  </main>
+  <Footer />
+</div>
+
     )
 }
 

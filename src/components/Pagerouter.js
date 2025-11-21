@@ -12,6 +12,10 @@ import Trading from "./servicepage/Trading";
 import Education from "./servicepage/Education";
 import Singleblog from "./blog/Singleblog";
 
+import FormDisplay from "./perform/FromDisplay";
+import Disclaimer from "./Disclaimer";
+
+
 const router = createBrowserRouter(
     [
         {
@@ -41,6 +45,7 @@ const router = createBrowserRouter(
                         }
                     ],
                 },
+               
                 {
                     path: "blogs",
                     element: <Blog />,
@@ -51,9 +56,16 @@ const router = createBrowserRouter(
                     path: "blog/:id", // ✅ dynamic route for single blog
                     element: <Singleblog />,
                 },
+                 {
+                    path: "disclainer", // 
+                    element: <Disclaimer />,
+                },
+                
 
             ]
+
         },
+       
         {
             path: "/login",
             element: <Adminlogin />
@@ -62,10 +74,11 @@ const router = createBrowserRouter(
             path: "/admin",
             element: (
                 < ProtectedRoute >
-                    <BlogForm />
+                    <FormDisplay/>
                 </ProtectedRoute >
             )
         },
+        
 
     ]
 );

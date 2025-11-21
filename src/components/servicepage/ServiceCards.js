@@ -5,7 +5,7 @@ export default function ServiceCards({ Heading, features }) {
       <h1 className=" text-3xl md:text-5xl font-playfair text-center font-bold text-primary mb-4">{Heading}</h1>
 
       {/* Features List */}
-      <ul className="list-disc text-xl  md:text-2xl list-inside text-gray-700 space-y-2">
+      <ul className="list-disc text-xl  md:text-xl mx-3 list-outside text-gray-700 space-y-2">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}

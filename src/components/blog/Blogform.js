@@ -32,8 +32,10 @@ export default function BlogForm() {
     formDataToSend.append("description", formData.description);
     formDataToSend.append("image", formData.image);
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+
     try {
-      const res = await axios.post("http://localhost:3001/api/blogs", formDataToSend, {
+      const res = await axios.post(`${apiUrl}api/blogs`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

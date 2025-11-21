@@ -10,20 +10,20 @@ export default function Blogview({ title, dis, image, id }) {
 
   return (
     <div
-      className="w-full md:w-1/5 h-auto rounded-2xl bg-secondary cursor-pointer hover:shadow-lg transition-all"
+      className="w-full lg:w-1/5 h-auto rounded-2xl border-2 border-black bg-secondary  hover:shadow-lg "
       onClick={viewHandler}
     >
-      <div className="border p-4 mb-4 rounded-lg shadow">
+      <div className="p-4 rounded-lg ">
         <h2 className="text-xl font-semibold mb-2">{title}</h2>
         <p className="text-gray-700 text-base mb-2">{dis} </p>
 
-        {image && (
+        
           <img
             src={image}
             alt={title}
             className="w-full h-48 object-cover rounded-lg"
           />
-        )}
+        
       </div>
     </div>
   );

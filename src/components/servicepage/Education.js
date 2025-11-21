@@ -42,7 +42,7 @@ export default function Education() {
   ];
 
   return (
-    <div className="text-center ">
+    <div className="text-center  ">
       <h1 className="text-7xl font-playfair text-primary font-bold text-center pt-5">
         EDUCATION PLAN
       </h1>

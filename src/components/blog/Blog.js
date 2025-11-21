@@ -7,11 +7,21 @@ export default function Blog() {
   const [filteredBlogs, setFilteredBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [month, monthsearch] = useState("");
+
+  // Pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 10;
+  const apiUrl = process.env.REACT_APP_API_URL;
+  console.log("hello");
+  
+  console.log(apiUrl);
+  
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/api/blogs");
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}api/blogs`);
         console.log("Fetched blogs:", res.data);
 
         if (Array.isArray(res.data)) {
@@ -42,9 +52,10 @@ export default function Blog() {
         (b) =>
           b.title.toLowerCase().includes(lowerSearch) ||
           b.description.toLowerCase().includes(lowerSearch) ||
-          b.month.toLowerCase().includes(lowerSearch) 
+          b.month.toLowerCase().includes(lowerSearch)
       );
       setFilteredBlogs(filtered);
+      setCurrentPage(1); // reset to page 1 on new search
     }
   }, [search, blogitem]);
 
@@ -52,8 +63,31 @@ export default function Blog() {
     return <p className="p-10">Loading blogs...</p>;
   }
 
+  // Pagination Calculation
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
+  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+
+
+  const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+
   return (
-    <div className="p-10">
+    <div className="p-10 ">
       {/* 🔍 Search Bar */}
       <div className="mb-6 w-full flex justify-center">
         <input
@@ -66,14 +100,13 @@ export default function Blog() {
       </div>
 
       {/* 📰 Blog List */}
-      <div className="flex flex-wrap justify-start gap-6">
-        {filteredBlogs.length > 0 ? (
-          filteredBlogs.map((e) => {
-            // 🧠 Shorten description to 30 words
-            const shortDesc = e.description
-              .split(" ")
-              .slice(0, 30)
-              .join(" ") + (e.description.split(" ").length > 30 ? "..." : "");
+      <div className=" w-full flex justify-center">
+        <div className=" w-[90%] flex flex-wrap justify-evenly gap-6">
+        {currentBlogs.length > 0 ? (
+          currentBlogs.map((e) => {
+            const shortDesc =
+              e.description.split(" ").slice(0, 30).join(" ") +
+              (e.description.split(" ").length > 30 ? "..." : "");
 
             return (
               <Blogview
@@ -89,6 +122,65 @@ export default function Blog() {
           <p>No blogs found.</p>
         )}
       </div>
+      </div>
+
+      {/* 📄 Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center mt-10 gap-2">
+
+          {/* Prev */}
+          <button
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage((prev) => prev - 1)}
+            className="px-4 py-2 rounded bg-gray-200 disabled:opacity-50"
+          >
+            Prev
+          </button>
+
+          {/* Page Numbers */}
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={`px-4 py-2 rounded ${
+                currentPage === index + 1
+                  ? "bg-indigo-500 text-white"
+                  : "bg-gray-200"
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          {/* Next */}
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage((prev) => prev + 1)}
+            className="px-4 py-2 rounded bg-gray-200 disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+      )}
+
+     <div className="flex justify-center pt-4">
+       <div className="w-[90%] flex lg:justify-between flex-wrap gap-3">
+        {
+          months.map((e)=>{
+            return(
+          
+             <button className="px-4 py-2 text-2xl  border-2 border-primary"  onClick={() => {setSearch(e)
+              console.log(e);
+              
+             }} >
+              <h2>{e}</h2> 
+            </button>
+           
+          )
+          })
+        }
+      </div>
+     </div>
     </div>
   );
 }

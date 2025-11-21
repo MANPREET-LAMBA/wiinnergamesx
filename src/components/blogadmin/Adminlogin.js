@@ -8,12 +8,12 @@ const Adminlogin = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const weburl = "http://localhost:3001/"
+const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${weburl}api/admin/login`, {
+      const res = await axios.post(`${apiUrl}api/admin/login`, {
         email,
         password,
       });
