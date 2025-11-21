@@ -1,19 +1,13 @@
 export default function Footer() {
   const exploreLinks = [
-    { name: 'About Us', url: '/about' },
     { name: 'Blogs', url: '/blogs' },
-    { name: 'Important Links', url: '/links' },
-    { name: 'Courses', url: '/courses' },
-    { name: 'Careers', url: '/careers' },
+    { name: 'Important Links', url: '/services/investment' },
+    { name: 'Courses', url: '/services/education' },
   ];
 
   const resourcesLinks = [
     { name: 'Disclamer', url: '/disclamer' },
-    { name: 'Testimonials', url: '/testimonials' },
-    { name: 'Upcoming Events', url: '/events' },
-    { name: 'Terms & Conditions', url: '/terms' },
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Refund Policy', url: '/refund' },
+  
   ];
 
   const contactInfo = {

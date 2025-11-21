@@ -57,7 +57,7 @@ const router = createBrowserRouter(
                     element: <Singleblog />,
                 },
                  {
-                    path: "disclainer", // 
+                    path: "disclamer", // 
                     element: <Disclaimer />,
                 },
                 
