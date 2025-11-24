@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         primary: "#006400",   // Dark Navy Blue
         secondary: "#FFF0DD", // Deep Blue
-        accent: "#FCFFFF",    // Soft White
+        accent: "#FCFFFF",  
+        copporx : "#0A043C"  // Soft White
       },
     },
   },

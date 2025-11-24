@@ -45,6 +45,8 @@ const apiUrl = process.env.REACT_APP_API_URL;
         <li key={index}>{point}</li>
       ))}
   </ul>
+
+  <a href="https://t.me/winnersgame/17182" className="text-blue-500 hover:text-white">https://t.me/winnersgame/17182</a>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import logo from "./photo/Group 64 (1)_imgupscaler.ai_General_16K.jpg";
+import "../index.css"
 
 export default function Navbarx() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -38,12 +39,12 @@ export default function Navbarx() {
         { name: "Positional Investing", href: "/services/forex/crude" },
       ],
     },
-    { label: "Algo Trading", href: "/services/algo" ,
+    { label: "Algo Trading ▸", href: "/services/algo" ,
     submenu: [
-        { name: "Automatic signals - index", href: "/services/forex/gold" },
-        { name: "Automatic signals - Forex", href: "/services/forex/currency" },
-        { name: "Automatic signals - Commodoties ", href: "/services/forex/crude" },
-         { name: "Automatic signals - Crypto ", href: "/services/forex/crude" },
+        { name: "Index", href: "/services/forex/gold" },
+        { name: "Forex", href: "/services/forex/currency" },
+        { name: "Commodoties ", href: "/services/forex/crude" },
+         { name: "Crypto ", href: "/services/forex/crude" },
       ]},
     {
       label: "Learning ▸",href: "/services/education",
@@ -79,13 +80,13 @@ export default function Navbarx() {
           flex-col lg:flex-row lg:flex
           absolute lg:static top-full left-0 w-full lg:w-auto
           bg-white lg:bg-transparent shadow-md lg:shadow-none
-          gap-4 lg:gap-6 text-yellow-400 font-playfair font-semibold lg:text-lg xl:text-2xl
+          gap-4 lg:gap-6 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-3xl
           transition-all duration-300 ease-in-out
           z-50
           ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}
         `}
       >
-        <a href="/"><li className="hover:text-indigo-600">Home</li></a>
+        <a href="/"><li className="hover:text-indigo-600 greenbg">Home</li></a>
 
         {/* Our Services */}
         <li
@@ -93,7 +94,7 @@ export default function Navbarx() {
           onMouseEnter={() => setIsDropdownOpen(true)}
         >
           <div
-            className="flex justify-between items-center lg:inline-block"
+            className="flex justify-between items-center textimg lg:inline-block"
             onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
           >
             <span className="flex items-center">Our Services</span>
@@ -162,7 +163,6 @@ export default function Navbarx() {
 
         <a href="/blogs"><li className="hover:text-indigo-600">Blog</li></a>
         {/* <a href="#"><li className="hover:text-indigo-600">About Us</li></a> */}
-        <a href="#"><li className="hover:text-indigo-600">Disclaimer</li></a>
         <a href="#"><li className="hover:text-indigo-600">Contact Us</li></a>
       </ul>
     </nav>

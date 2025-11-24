@@ -26,12 +26,15 @@ export default function Review() {
                         text: "Amazing education resources. I finally understand how to manage risks properly.",
                     },
                 ].map(({ name, text }) => (
+                     <div className="bg-gradient-to-r  from-pink-700 via-purple-700 w-2/12  to-sky-700 p-1 hover:scale-105 transition-all duration-500 ease-in-out rounded-xl">
+
                     <div
                         key={name}
-                        className="bg-secondary border-2 border-primary rounded-lg shadow-md p-4 w-64 flex flex-col justify-end"
+                        className="bg-white border-2 border-primary rounded-lg shadow-md p-4 w-full h-full flex flex-col justify-between"
                     >
-                        <p className=" text-xl md:text-2xl mb-2 text-primary">"{text}"</p>
+                        <p className=" text-xl md:text-2xl mb-2  text-primary">"{text}"</p>
                         <p className="font-semibold text-primary text-2xl md:text-4xl font-playfair pt-5">– {name}</p>
+                    </div>
                     </div>
                 ))}
             </div>

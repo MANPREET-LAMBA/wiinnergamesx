@@ -25,18 +25,18 @@ export default function Aboutus() {
   return (
     <section className="w-full   py-16 px-6 md:px-12 lg:px-20">
       {/* Heading */}
-      <div className="text-center md:text-left mb-10">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold leading-tight">
+      <div className="text-center md:text-center flex flex-col items-center mb-10 ">
+        <h2 className="text-4xl sm:text-5xl text-center md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold leading-tight">
           <span className="text-purple-600">Why </span>
           <span className="text-primary">Join Us?</span>
         </h2>
-        <p className="mt-4 text-base sm:text-lg lg:text-2xl text-gray-700 w-4/5 mx-auto md:mx-0">
+        <p className="pt-8 text-base text-center  sm:text-lg lg:text-2xl text-gray-700 w-11/12 mx-auto md:mx-0">
 At WIINNERSGAME, we re-define winning strategies whether it is investment, trading or learning 
 We are focused over deep research, discipline and maintain integrity to deliver highest winning rate.         </p>
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col md:items-center lg:flex-row justify-center md:justify-between items-center md:items-stretch gap-8  md:w-[90%] mx-11 lg:mx-auto">
+      <div className="flex flex-col md:items-center lg:flex-row justify-center md:justify-between items-center  gap-8  md:w-[90%] mx-11 lg:mx-auto">
         {cards.map((card, index) => (
           <div
             key={index}

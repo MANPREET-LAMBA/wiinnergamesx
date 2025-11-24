@@ -11,7 +11,9 @@ import Adminlogin from './components/blogadmin/Adminlogin';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <Pagerouter/>
+
+     <Pagerouter/>
+
 
   </React.StrictMode>
 );

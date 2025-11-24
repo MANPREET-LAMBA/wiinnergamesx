@@ -35,10 +35,10 @@ export default function Join() {
     {
       Heading: "Algo Trading",
       features: [
-        "Automated Signal- Index",
-        "Automated Signal- Forex",
-        "Automated Signal- Commodities",
-       "Automated Signal- Crypto",
+        "Index",
+        "Forex",
+        "Commodities",
+       "Crypto",
        
       ]
     },
@@ -71,7 +71,7 @@ export default function Join() {
           <h2 className="text-5xl lg:text-8xl w-fit font-playfair text-primary font-extrabold mb-4  z-10">Our Services</h2>
 
         </div>
-        <div className="flex flex-col z-40  w-full  justify-center lg:flex-row  lg:justify-evenly lg:flex-wrap h-full pt-12 gap-10">
+        <div className="flex flex-col z-40     justify-center lg:flex-row  lg:justify-evenly lg:flex-wrap h-full pt-12 gap-10">
 
           {data.map((data, index) => (
 

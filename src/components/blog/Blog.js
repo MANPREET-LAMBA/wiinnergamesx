@@ -164,7 +164,7 @@ export default function Blog() {
       )}
 
      <div className="flex justify-center pt-4">
-       <div className="w-[90%] flex lg:justify-between flex-wrap gap-3">
+       <div className="w-[90%] flex lg:justify-start flex-wrap gap-3">
         {
           months.map((e)=>{
             return(

@@ -16,9 +16,10 @@ export default function PostForm() {
     const formData = new FormData();
     formData.append("image", image);
     formData.append("category", category);
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     try {
-      const res = await axios.post("http://localhost:3001/api/posts", formData, {
+      const res = await axios.post(`${apiUrl}api/posts`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
