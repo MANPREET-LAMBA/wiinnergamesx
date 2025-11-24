@@ -80,7 +80,7 @@ export default function Navbarx() {
           flex-col lg:flex-row lg:flex
           absolute lg:static top-full left-0 w-full lg:w-auto
           bg-white lg:bg-transparent shadow-md lg:shadow-none
-          gap-4 lg:gap-6 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-3xl
+          gap-4 lg:gap-6 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-xl
           transition-all duration-300 ease-in-out
           z-50
           ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}
