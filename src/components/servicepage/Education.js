@@ -44,11 +44,11 @@ export default function Education() {
 
   return (
     <div className="text-center    ">
-       <div className="w-full px-10  h[70vh]">
+       <div className="w-full px-10 pt-10 h[70vh]">
         <img className=" rounded-xl" src={imgss}/>
 
       </div>
-      <h1 className="text-7xl font-playfair text-primary font-bold text-center pt-5">
+      <h1 className="text-4xl md:text-7xl font-playfair text-primary font-bold text-center pt-5">
         EDUCATION PLAN
       </h1>
 
