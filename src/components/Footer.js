@@ -11,7 +11,7 @@ export default function Footer() {
   ];
 
   const contactInfo = {
-    address: 'Wiinnergame, agra, Uttarpradesh',
+    address: 'Wiinnergame, Agra, Uttarpradesh',
     phone: '+91 72539-00555 ',
     email: ' Wiinnersgame@gmail.com',
   };
@@ -34,7 +34,7 @@ export default function Footer() {
             <div>
               <div className="flex flex-col items-center justify-center ">
                 <h1 className="text-primary text-4xl ">WIINNERSGAME</h1>
-                <div className="w-[80%] h-1 mt-4 bg-primary"></div>
+                <div className="w-[80%] h-1 mt-2 bg-primary"></div>
               </div>
             </div>
 

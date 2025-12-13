@@ -58,7 +58,7 @@ export default function Navbarx() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-black relative">
+    <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-black relative xl:pr-10">
       {/* Logo */}
       <div className="text-2xl font-bold text-indigo-900">
         <img className="w-56 lg:w-11/12  xl:h-24 rounded-xl h-16 lg:h-24" src={logo} alt="Logo" />
@@ -68,7 +68,7 @@ export default function Navbarx() {
       <div className="lg:hidden">
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="text-indigo-900"
+          className="text-white"
         >
           {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
@@ -79,14 +79,14 @@ export default function Navbarx() {
         className={`
           flex-col lg:flex-row lg:flex
           absolute lg:static top-full left-0 w-full lg:w-auto
-          bg-white lg:bg-transparent shadow-md lg:shadow-none
+          bg-black lg:bg-transparent shadow-md lg:shadow-none
           gap-4 lg:gap-6 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-xl
           transition-all duration-300 ease-in-out
           z-50
           ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}
         `}
       >
-        <a href="/"><li className="hover:text-indigo-600 greenbg">Home</li></a>
+        <a href="/"><li className="hover:text-indigo-600 ">Home</li></a>
 
         {/* Our Services */}
         <li
@@ -94,7 +94,7 @@ export default function Navbarx() {
           onMouseEnter={() => setIsDropdownOpen(true)}
         >
           <div
-            className="flex justify-between items-center textimg lg:inline-block"
+            className="flex justify-between items-center  lg:inline-block"
             onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
           >
             <span className="flex items-center">Our Services</span>
@@ -137,12 +137,12 @@ export default function Navbarx() {
 
           {/* Mobile Dropdown */}
           {isMobileServicesOpen && (
-            <ul className="lg:hidden bg-gray-100 rounded-lg mt-2 ml-2 p-2 text-base space-y-2">
+            <ul className="lg:hidden bg-black rounded-lg mt-2 ml-2 p-2 text-base space-y-2">
               {menuItems.map((item, idx) => (
                 <li key={idx}>
                   <p className="font-semibold">{item.label.replace(" ▸", "")}</p>
                   {item.submenu && (
-                    <ul className="ml-4 space-y-1 text-gray-600">
+                    <ul className="ml-4 space-y-1 text-white">
                       {item.submenu.map((sub, i) => (
                         <li key={i}>
                           <a href={sub.href}>{sub.name}</a>

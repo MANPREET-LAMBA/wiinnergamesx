@@ -38,7 +38,7 @@ function App() {
         <div className=" absolute   z-30 flex flex-col gap-5 md:gap-5 rounded-l-xl  bg-secondary py-4 px-2 md:p-5 ">
           <a href="https://x.com/wiinnersgame"> <img className="w-[4vh] md:w-[2vw] " src={instagrams} /></a>
           <a href=""><img className="w-[4vh] md:w-[2vw] " src={telegram} /></a>
-          <a href=""><img className="w-[4vh] md:w-[2vw] " src={whatsapp} /></a>
+          <a href="https://wa.me/7253900555"><img className="w-[4vh] md:w-[2vw] " src={whatsapp} /></a>
           <a href=""><img className="w-[4vh] md:w-[2vw] " src={youtubes} /></a>
         </div>
       </div>

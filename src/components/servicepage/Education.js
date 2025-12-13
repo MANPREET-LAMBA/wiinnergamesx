@@ -1,4 +1,5 @@
 import ServiceCards from "./ServiceCards";
+import imgss from "../photo/Gemini_Generated_Image_1uipk61uipk61uip.png"
 
 export default function Education() {
   const data = [
@@ -42,10 +43,16 @@ export default function Education() {
   ];
 
   return (
-    <div className="text-center  ">
+    <div className="text-center    ">
+       <div className="w-full px-10  h[70vh]">
+        <img className=" rounded-xl" src={imgss}/>
+
+      </div>
       <h1 className="text-7xl font-playfair text-primary font-bold text-center pt-5">
         EDUCATION PLAN
       </h1>
+
+     
 
       <div className="flex text-start justify-evenly flex-wrap gap-10 p-10">
         {data.map((plan, index) => (

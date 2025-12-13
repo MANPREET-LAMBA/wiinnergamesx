@@ -26,7 +26,7 @@ export default function Review() {
                         text: "Amazing education resources. I finally understand how to manage risks properly.",
                     },
                 ].map(({ name, text }) => (
-                     <div className="bg-gradient-to-r  from-pink-700 via-purple-700 w-2/12  to-sky-700 p-1 hover:scale-105 transition-all duration-500 ease-in-out rounded-xl">
+                     <div className="bg-gradient-to-r  from-pink-700 via-purple-700 lg:w-2/12  to-sky-700 p-1 hover:scale-105 transition-all duration-500 ease-in-out rounded-xl">
 
                     <div
                         key={name}

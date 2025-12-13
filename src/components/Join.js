@@ -4,7 +4,7 @@ import Cardservice from "./Cardsservice"
 export default function Join() {
   const data = [
     {
-      Heading: "INVESTMENT",
+      Heading: "Investment",
       features: [
         "Long Term",
         "Wealth Creation",
@@ -14,7 +14,7 @@ export default function Join() {
       ]
     },
     {
-      Heading: "TRADING",
+      Heading: "Trading",
       features: [
         "Short Term",
         "Swing Trading",
@@ -47,8 +47,9 @@ export default function Join() {
       features: [
         "Fundamentals",
         "Prop Levels",
+        "Future & option",
         "RA Certification",
-        "Practise Session"
+        
        
       ]
     },
