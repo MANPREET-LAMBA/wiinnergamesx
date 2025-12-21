@@ -52,14 +52,14 @@ export default function Investment() {
   ];
 
   return (
-    <div className="text-center w-full">
+    <div className="text-center mt-24 w-full">
       <h1 className="text-4xl md:text-7xl font-playfair text-primary font-bold pt-5">
         INVESTMENT PLAN
       </h1>
 
       {/* 🟣 Pricing Table Layout (TradingView style) */}
-      <div className="w-full mt-10 px-5">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="w-full mt-10 px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4  gap-8">
           {data.map((plan, index) => (
             <ServiceCards
               key={index}

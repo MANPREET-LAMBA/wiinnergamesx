@@ -2,7 +2,7 @@ import algoimg from "./photo/Gemini_Generated_Image_70macb70macb70ma (1).png"
 export default function Algo() {
   return (
     <section className="text-center px-6 py-12 w-full    ">
-      <h2 className=" text-6xl lg:text-8xl font-playfair font-bold text-primary mb-12">Algo Trading</h2>
+      <h2 className=" text-5xl lg:text-7xl font-playfair font-bold text-primary mb-12">Algo Trading</h2>
       <div className="flex flex-col lg:flex-row items-center md:items-start md:">
         <div className="  flex justify-center">
           <img

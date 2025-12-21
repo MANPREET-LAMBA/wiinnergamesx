@@ -58,10 +58,10 @@ export default function Navbarx() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-black relative xl:pr-10">
+    <nav className="flex items-center justify-between px-6 py-4 shadow-md  bg-black relative xl:pr-20">
       {/* Logo */}
       <div className="text-2xl font-bold text-indigo-900">
-        <img className="w-56 lg:w-11/12  xl:h-24 rounded-xl h-16 lg:h-24" src={logo} alt="Logo" />
+        <img className="w-56 lg:w-11/12  xl:h-24 rounded-xl h-16 lg:h-24" src={logo} alt="Logo" loading="eager"/>
       </div>
 
       {/* Hamburger Icon (mobile & tablet) */}
@@ -80,7 +80,7 @@ export default function Navbarx() {
           flex-col lg:flex-row lg:flex
           absolute lg:static top-full left-0 w-full lg:w-auto
           bg-black lg:bg-transparent shadow-md lg:shadow-none
-          gap-4 lg:gap-6 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-xl
+          gap-4 lg:gap-14 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-2xl
           transition-all duration-300 ease-in-out
           z-50
           ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}
@@ -110,7 +110,7 @@ export default function Navbarx() {
                 setIsDropdownOpen(false);
                 setActiveSubmenu(null);
               }}
-              className="absolute left-0 top-full mt-2 bg-slate-600 bg-opacity-90 text-white shadow-lg rounded-lg py-2 w-56 hidden lg:block"
+              className="absolute left-0 top-full mt-8 bg-black bg-opacity-60 text-white shadow-lg rounded-lg py-2 w-56 hidden lg:block"
             >
               {menuItems.map((item, idx) => (
                 <li
@@ -122,7 +122,7 @@ export default function Navbarx() {
                   <a href={item.href || "#"}>{item.label}</a>
                   {item.submenu &&
                     activeSubmenu === item.label && (
-                      <ul className="absolute left-full top-0 ml-1 bg-slate-700 rounded-lg py-2 w-48 shadow-lg">
+                      <ul className="absolute left-full top-0 ml-1 bg-black bg-opacity-60 rounded-lg py-2 w-48 shadow-lg">
                         {item.submenu.map((sub, i) => (
                           <li key={i} className="px-4 py-2 hover:bg-indigo-400">
                             <a href={sub.href}>{sub.name}</a>

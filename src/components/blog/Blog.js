@@ -25,8 +25,10 @@ export default function Blog() {
         console.log("Fetched blogs:", res.data);
 
         if (Array.isArray(res.data)) {
-          setBlogitem(res.data);
-          setFilteredBlogs(res.data);
+          setBlogitem(res.data.reverse());
+          setFilteredBlogs(res.data.reverse());
+          console.log(filteredBlogs);
+          
         } else {
           console.error("Expected array but got:", typeof res.data, res.data);
           setBlogitem([]);

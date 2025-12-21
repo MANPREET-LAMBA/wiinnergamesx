@@ -28,7 +28,7 @@ export default function Trading() {
   ];
 
   return (
-    <div className="text-center h-fit ">
+    <div className="text-center h-fit mt-24">
       <h1 className="text-4xl md:text-7xl font-playfair text-primary font-bold text-center pt-5">
         TRDAING PLAN
       </h1>

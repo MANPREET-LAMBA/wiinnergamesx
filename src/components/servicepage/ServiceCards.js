@@ -9,7 +9,7 @@ export default function ServiceCards({ Heading, features,Price }) {
         {Heading}
       </h1>
 
-      <ul className=" text-lg md:text-xl mx-5 text-start text-gray-700 space-y-2">
+      <ul className=" text-lg md:text-xl mx-1 text-start text-gray-700 space-y-2">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}

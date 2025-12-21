@@ -43,7 +43,7 @@ export default function Education() {
   ];
 
   return (
-    <div className="text-center    ">
+    <div className="text-center  mt-24   ">
        <div className="w-full px-10 pt-10 h[70vh]">
         <img className=" rounded-xl" src={imgss}/>
 

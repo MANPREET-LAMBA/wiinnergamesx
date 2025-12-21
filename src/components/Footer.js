@@ -11,7 +11,7 @@ export default function Footer() {
   ];
 
   const contactInfo = {
-    address: 'Wiinnergame, Agra, Uttarpradesh',
+    address: 'Wiinnersgame, Agra-282002 (U.P)',
     phone: '+91 72539-00555 ',
     email: ' Wiinnersgame@gmail.com',
   };
@@ -40,25 +40,28 @@ export default function Footer() {
 
 
             <div className="mt-4">
-              <h3 className="text-2xl text-center font-bold mb-4">Address</h3>
+              <h3 className=" text-2xl text-center font-bold mb-4">Address</h3>
 
               {/* Address */}
-              <div className="flex items-start text-xl mb-3">
-                <span className="text-red-400 text-xl mr-3">📍</span>
+              <div className="flex items-start text-lg mb-3">
+                <span className="text-red-400 text-lg mr-3">📍</span>
                 <p>{contactInfo.address}</p>
               </div>
 
               {/* Phone */}
-              <div className="flex items-start text-xl mb-3">
-                <span className="text-red-400 text-xl mr-3">📞</span>
+              <div className="flex items-start text-lg mb-3">
+                <span className="text-red-400 text-lg mr-3">📞</span>
                 <p>{contactInfo.phone}</p>
               </div>
 
               {/* Email */}
-              <div className="flex items-start text-xl mb-3">
-                <span className="text-red-400 text-xl mr-3">📧</span>
+              <div className="flex items-start text-lg mb-3">
+                <span className="text-red-400 text-lg mr-3">📧</span>
                 <p>{contactInfo.email}</p>
               </div>
+              {/* <div className="w-full flex justify-center">
+                <hr className="h-1 bg-black w-[60%]"/>
+              </div> */}
             </div>
 
 
@@ -78,14 +81,14 @@ export default function Footer() {
 
           {/* === Column 2: Resources === */}
           <div className="">
-            <h3 className="text-xl text-start font-semibold mb-4">Resources</h3>
+            <h3 className="text-2xl text-center lg:text-start font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-xl">
               {resourcesLinks.map((link) => (
                 <li key={link.name} className="flex items-start">
                   <span className="w-2 h-2 bg-red-500 mt-2 mr-3 rounded-sm"></span>
                   <a
                     href={link.url}
-                    className="hover:text-red-400 transition"
+                    className="hover:text-red-400 transition text-lg lg:text-xl"
                   >
                     {link.name}
                   </a>
@@ -96,15 +99,15 @@ export default function Footer() {
 
 
 {/* === Column 1: Explore === */}
-          <div className="border-r-2 border-black">
-            <h3 className="text-xl text-start font-semibold  mb-4">Explore</h3>
+          <div className="">
+            <h3 className="text-2xl text-center lg:text-start font-semibold  mb-4">Explore</h3>
             <ul className="space-y-2 text-xl">
               {exploreLinks.map((link) => (
                 <li key={link.name} className="flex items-start">
                   <span className="w-2 h-2 bg-red-500 mt-2 mr-3 rounded-sm"></span>
                   <a
                     href={link.url}
-                    className="hover:text-red-400 transition"
+                    className="hover:text-red-400 transition text-lg lg:text-xl"
                   >
                     {link.name}
                   </a>

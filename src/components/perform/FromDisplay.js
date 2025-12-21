@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Postsheet from "./Postsheet";
 import BlogForm from "../blog/Blogform";
+import Delete from "./Delete";
 
 export default function FormDisplay() {
   const [activeForm, setActiveForm] = useState("blog"); // default
@@ -28,6 +29,15 @@ export default function FormDisplay() {
         >
           Post Form
         </button>
+        
+        <button
+          onClick={() => setActiveForm("delete")}
+          className={`px-4 py-2 rounded ${
+            activeForm === "delete" ? "bg-green-600 text-white" : "bg-gray-200"
+          }`}
+        >
+          Delete
+        </button>
       </div>
 
       {/* Show Blog Form */}
@@ -35,6 +45,7 @@ export default function FormDisplay() {
 
       {/* Show Post Form */}
       {activeForm === "post" && <Postsheet />}
+      {activeForm === "delete" && <Delete />}
     </div>
   );
 }

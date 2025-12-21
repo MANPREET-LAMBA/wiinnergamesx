@@ -30,7 +30,7 @@ export default function Review() {
 
                     <div
                         key={name}
-                        className="bg-white border-2 border-primary rounded-lg shadow-md p-4 w-full h-full flex flex-col justify-between"
+                        className="bg-white  rounded-lg shadow-md p-4 w-full h-full flex flex-col justify-between"
                     >
                         <p className=" text-xl md:text-2xl mb-2  text-primary">"{text}"</p>
                         <p className="font-semibold text-primary text-2xl md:text-4xl font-playfair pt-5">– {name}</p>
