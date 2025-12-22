@@ -40,7 +40,7 @@ We are focused over deep research, discipline and maintain integrity to deliver 
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`${card.color} text-white p-8 rounded-2xl shadow-md relative hover:scale-105 transition-transform duration-300 w-full sm:w-[90%] lg:w-1/3`}
+            className={`${card.color} lg:h-72 text-white p-8 rounded-2xl shadow-md relative hover:scale-105 transition-transform duration-300 w-full sm:w-[90%] lg:w-1/3`}
           >
             <div className="absolute -top-6 left-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-full p-4 shadow-lg">
               {card.icon}

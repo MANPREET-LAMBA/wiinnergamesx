@@ -29,10 +29,10 @@ function App() {
         </div>
 
         <div className=" absolute   z-30 flex flex-col gap-5 md:gap-5 rounded-l-xl textblurx bg-secondary py-4 px-2 md:p-5 ">
-          <img className="w-[4vh] md:w-[vw] " src={instagrams} />
-          <img className="w-[4vh] md:w-[vw] " src={telegram} />
-          <img className="w-[4vh] md:w-[vw] " src={whatsapp} />
-          <img className="w-[4vh] md:w-[vw] " src={youtubes} />
+          <img className="w-[4vh] md:w-[2vw] " src={instagrams} />
+          <img className="w-[4vh] md:w-[2vw] " src={telegram} />
+          <img className="w-[4vh] md:w-[2vw] " src={whatsapp} />
+          <img className="w-[4vh] md:w-[2vw] " src={youtubes} />
         </div>
 
         <div className=" absolute   z-30 flex flex-col gap-5 md:gap-5 rounded-l-xl  bg-secondary py-4 px-2 md:p-5 ">

@@ -1,4 +1,4 @@
-import logo from "./photo/Group 64 (1)_imgupscaler.ai_General_16K.jpg";
+import logo from "./photo/logoo.png";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp, Target } from "lucide-react";
 import "../index.css"
@@ -66,10 +66,10 @@ export default function Nav() {
 
 
     return (
-        <div className="w-full flex  justify-center absolute z-50 mt-3  ">
-           <div className="flex items-center justify-between gap-5 border-2 p-1 px-4 bg-black bg-opacity-85 border-black w-3/5 rounded-xl">
+        <div className="w-full flex  justify-center absolute z-50 lg:mt-3  ">
+           <div className="flex items-center justify-between gap-5 border-2 p-1 px-4 bg-black lg:bg-opacity-85 border-black w-full lg:w-4/5 lg:rounded-xl">
              <div>
-                <img className="w-56 lg:w-9/12  xl:h-16 rounded-xl h-16 lg:h-20" src={logo}/> 
+                <img className="w-56 lg:w-11/12  xl:h-16 rounded-xl h-16 lg:h-20" src={logo}/> 
             </div>
             <div className="">
 
@@ -79,7 +79,7 @@ export default function Nav() {
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="text-white"
                     >
-                        {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}
+                        {isMobileMenuOpen ? <X size={30}  /> : <Menu size={30} />}
                     </button>
                 </div>
 
@@ -89,7 +89,7 @@ export default function Nav() {
           flex-col lg:flex-row lg:flex
           absolute lg:static top-full left-0 w-full lg:w-auto
           bg-black lg:bg-transparent shadow-md lg:shadow-none
-          gap-4 lg:gap-14 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-2xl
+          gap-4 xl:gap-14 text-yellow-400 font-playfair font-bold lg:text-lg xl:text-2xl
           transition-all duration-300 ease-in-out
           z-50
           ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}

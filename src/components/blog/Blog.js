@@ -89,7 +89,7 @@ export default function Blog() {
 
 
   return (
-    <div className="p-10 ">
+    <div className="p-10 md:mt-20 ">
       {/* 🔍 Search Bar */}
       <div className="mb-6 w-full flex justify-center">
         <input

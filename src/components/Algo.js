@@ -1,15 +1,15 @@
 import algoimg from "./photo/Gemini_Generated_Image_70macb70macb70ma (1).png"
 export default function Algo() {
   return (
-    <section className="text-center px-6 py-12 w-full    ">
+    <section className="text-center flex flex-col items-center px-6 py-12 w-full     ">
       <h2 className=" text-5xl lg:text-7xl font-playfair font-bold text-primary mb-12">Algo Trading</h2>
-      <div className="flex flex-col lg:flex-row items-center md:items-start md:">
-        <div className="  flex justify-center">
+      <div className="flex border-2 w-fit bg-black flex-col lg:flex-row items-center md:items-start md:">
+        <div className=" lg:w-3/5 flex justify-center items-center">
           <img
-            className=" w-[70%] md:w-[70%] rounded-2xl"
+            className=" w-[70%] md:w-[80%] rounded-2xl"
             src={algoimg} />
         </div>
-        <div className=" w-full pt-4 lg:pt-0 bg-red  text-black flex flex-col md:items-center lg:items-start md:pt-5 md:px-10 lg:text-justify lg:w-[40%] ">
+        <div className=" w-full lg:w-[100%] md: pt-4 lg:pt-0 bg-red-300  text-black flex flex-col md:items-center lg:items-start md:pt-5 md:px-10 lg:text-justify  ">
           <p className=" w-full px-9 lg:max-w-3xl   text-xl text-justify  md:px-0 md:text-2xl pt-7  lg:text-justify mb-6 ">
             At Wiinnersgame Ventures, we harness the power of Algorithmic Trading
             to simplify decision-making and remove emotions from investing. Our

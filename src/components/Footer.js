@@ -26,11 +26,11 @@ export default function Footer() {
 
 
 
-      <div className=" text-primary py-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+      <div className="  text-primary py-10">
+        <div className="max-w-7xl  mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
 
           {/* === Column 3: Address === */}
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center">
             <div>
               <div className="flex flex-col items-center justify-center ">
                 <h1 className="text-primary text-4xl ">WIINNERSGAME</h1>
@@ -80,7 +80,7 @@ export default function Footer() {
           
 
           {/* === Column 2: Resources === */}
-          <div className="">
+          <div className=" flex flex-col items-center ">
             <h3 className="text-2xl text-center lg:text-start font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-xl">
               {resourcesLinks.map((link) => (
@@ -99,7 +99,7 @@ export default function Footer() {
 
 
 {/* === Column 1: Explore === */}
-          <div className="">
+          <div className="flex flex-col items-center">
             <h3 className="text-2xl text-center lg:text-start font-semibold  mb-4">Explore</h3>
             <ul className="space-y-2 text-xl">
               {exploreLinks.map((link) => (

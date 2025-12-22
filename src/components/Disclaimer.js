@@ -1,6 +1,6 @@
 export default function Disclaimer() {
   return (
-    <div className="max-w-4xl mx-auto p-6 text-gray-800 leading-relaxed">
+    <div className="max-w-4xl mx-auto p-6 md:mt-20 text-gray-800 leading-relaxed">
       <h1 className="text-3xl font-bold mb-4">DISCLAIMER</h1>
 
       <p>
