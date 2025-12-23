@@ -10,7 +10,7 @@ export default function Herosection() {
       <div className=" absolute w-full ">
         <section className=" h-screen overflow-hidden  lg:h-[80vh] bg-transparent  text-copporx py-8 lg:py-16 text-center flex flex-col items-center lg:flex-row  lg:justify-evenly lg:items-start  w-full lg:px-16">
           <div className="w-[100%] flex justify-center mt-10 lg:mt-20 ">
-            <h1 className="text-4xl lg:text-5xl xl:text-8xl  text-center  text-white lg:text-start p-3 font-playfair  rounded-xl font-extrabold ">
+            <h1 className="text-4xl lg:text-5xl xl:text-7xl  text-center  text-white lg:text-start p-3 font-playfair  rounded-xl font-extrabold ">
              Re-defining Winning Strategies 
           </h1>
           </div>

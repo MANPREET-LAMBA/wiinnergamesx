@@ -1,3 +1,5 @@
+import checkimg from "../photo/check.png"
+
 export default function ServiceCards({ Heading, features,Price }) {
   return (
     <div className="bg-gradient-to-r from-pink-700 via-purple-700 to-sky-700 p-1 hover:scale-105 transition-all duration-500 ease-in-out rounded-xl">
@@ -11,7 +13,12 @@ export default function ServiceCards({ Heading, features,Price }) {
 
       <ul className=" text-lg md:text-xl mx-1 text-start text-gray-700 space-y-2">
         {features.map((feature, index) => (
-          <li key={index}>{feature}</li>
+          <div className="flex items-start gap-2 ">
+             {/* <img className='w-5 h-5 mt-1' src={checkimg}/> */}
+             <h3 className="ext-3xl md:text-4xl font-playfair text-center font-bold text-primary mb-4">*</h3>
+              <li key={index}>{feature}</li>
+          </div>
+         
         ))}
       </ul>
     </div>

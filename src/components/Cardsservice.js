@@ -1,4 +1,5 @@
 import '../index.css'
+import checkimg from "./photo/check.png"
 
 export default function Cardservice({ service, title }) {
     return (
@@ -6,9 +7,12 @@ export default function Cardservice({ service, title }) {
         <div className=" w-full   h-full py-5 px-3  lg:h-full rounded-xl overflow-hidden bg-white">
 
             <h1 className="text-3xl text-primary font-playfair  font-bold">{title} </h1>
-            <ul className="list-disc  list-outside mx-5 text-start text-xl pt-4 md:text-2xl  text-gray-700 space-y-2">
+            <ul className="list-none  list-outside mx-5 text-start text-xl pt-4 md:text-2xl  text-gray-700 space-y-2">
                 {service.map((service, index) => (
-                    <li key={index}>{service}</li>
+                   <div className='flex items-center gap-2'>
+                    <img className='w-5 h-5' src={checkimg}/>
+                     <li key={index}>{service}</li>
+                   </div>
                 ))}
             </ul>
 
