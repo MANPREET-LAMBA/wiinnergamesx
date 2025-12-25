@@ -2,7 +2,7 @@ export default function Review() {
     return (
         <section className="py-12 px-6 text-center">
             <div className="flex justify-center">
-                <h2 className=" font-bold font-playfair text-primary  text-5xl md:text-6xl lg:text-8xl mb-6">
+                <h2 className=" font-bold font-playfair text-primary  text-5xl  md:text-6xl lg:text-7xl xl:text-7xl mb-6">
                    Testimonials
                 </h2>
                

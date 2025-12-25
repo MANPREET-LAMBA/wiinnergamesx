@@ -26,7 +26,7 @@ export default function Aboutus() {
     <section className="w-full   py-16  md:px-12 lg:px-20">
       {/* Heading */}
       <div className="text-center md:text-center flex flex-col items-center mb-10 ">
-        <h2 className="text-5xl sm:text-5xl text-center md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold leading-tight">
+        <h2 className="text-5xl sm:text-5xl text-center md:text-6xl lg:text-7xl xl:text-7xl font-playfair font-bold leading-tight">
           <span className="text-purple-600">Why </span>
           <span className="text-primary">Join Us?</span>
         </h2>

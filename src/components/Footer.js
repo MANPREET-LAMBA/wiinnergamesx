@@ -16,7 +16,7 @@ export default function Footer() {
     email: ' Wiinnersgame@gmail.com',
   };
   return (
-    <footer className=" text-white py-10 text-center flex flex-col bg-secondary  font-playfair text-4xl lg:text-9xl font-bold ">
+    <footer className=" text-white py-10 text-center flex flex-col bg-secondary  font text-4xl lg:text-9xl font-bold ">
       {/* <div className="flex flex-col items-center justify-center ">
         <h1 className="text-primary ">WIINNERSGAME</h1>
         <div className="w-[80%] h-1 bg-primary"></div>
@@ -34,13 +34,14 @@ export default function Footer() {
             <div>
               <div className="flex flex-col items-center justify-center ">
                 <h1 className="text-primary text-4xl ">WIINNERSGAME</h1>
-                <div className="w-[80%] h-1 mt-2 bg-primary"></div>
+                <div className="w-[100%] h-1 mt-2 bg-primary"></div>
               </div>
             </div>
 
 
             <div className="mt-4">
               <h3 className=" text-2xl text-center font-bold mb-4">Address</h3>
+              
 
               {/* Address */}
               <div className="flex items-start text-lg mb-3">
@@ -81,7 +82,8 @@ export default function Footer() {
 
           {/* === Column 2: Resources === */}
           <div className=" flex flex-col items-center ">
-            <h3 className="text-2xl text-center lg:text-start font-semibold mb-4">Resources</h3>
+            <h3 className="text-2xl text-center lg:text-start  border-b-4 border-primary font-semibold mb-4">Resources</h3>
+
             <ul className="space-y-2 text-xl">
               {resourcesLinks.map((link) => (
                 <li key={link.name} className="flex items-start">
@@ -99,9 +101,11 @@ export default function Footer() {
 
 
 {/* === Column 1: Explore === */}
-          <div className="flex flex-col items-center">
-            <h3 className="text-2xl text-center lg:text-start font-semibold  mb-4">Explore</h3>
-            <ul className="space-y-2 text-xl">
+          <div className="flex flex-col  items-center">
+            <div>
+              <h3 className="  text-2xl text-center lg:text-start border-b-4 border-primary font-semibold  mb-4">Explore</h3>
+              
+            <ul className="space-y-2 text-xl ">
               {exploreLinks.map((link) => (
                 <li key={link.name} className="flex items-start">
                   <span className="w-2 h-2 bg-red-500 mt-2 mr-3 rounded-sm"></span>
@@ -114,6 +118,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
 
 

@@ -2,7 +2,7 @@ import algoimg from "./photo/algo2.png"
 export default function Algo() {
   return (
     <section className="text-center flex flex-col items-center px-6 py-12 w-full     ">
-      <h2 className=" text-5xl lg:text-7xl font-playfair font-bold text-primary mb-12">Algo Trading</h2>
+      <h2 className=" text-5xl  md:text-6xl lg:text-7xl xl:text-7xl font-playfair font-bold text-primary mb-12">Algo Trading</h2>
       <div className="flex border-2 w-fit bg-black flex-col rounded-xl lg:flex-row items-center md:items-start md:">
         <div className=" lg:w-3/5 flex justify-center items-center">
           <img
