@@ -62,7 +62,12 @@ export default function Blog() {
   }, [search, blogitem]);
 
   if (loading) {
-    return <p className="p-10">Loading blogs...</p>;
+    return(
+      <div className="w-full h-screen flex flex-col justify-center items-center">
+        
+         <p className="p-10 text-5xl font-playfair font-bold">Loading blogs...</p>
+      </div>
+    );
   }
 
   // Pagination Calculation

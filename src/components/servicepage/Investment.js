@@ -1,10 +1,13 @@
 import Sheet from "../perform/Sheet";
 import ServiceCards from "./ServiceCards";
+import logo from "../service/Boots in Business course….jpeg"
+
 
 export default function Investment() {
   const data = [
     {
       Price : "****",
+      imgx : "/Boots in Business course….jpeg",
       Heading: "BASIC",
       features: [
         "Fundamental Calls for Long Term Wealth Creation",
@@ -20,6 +23,7 @@ export default function Investment() {
     },
     {
       Price : "****",
+      imgx : "/How Is Inflation Affecting the US Real Estate Market_.jpeg",
       Heading: "PLAN B",
       features: [
         "Multibagger Calls",
@@ -31,6 +35,7 @@ export default function Investment() {
     },
     {
        Price : "****",
+       imgx : "/Search Marketing Results in Higher ROI and Leads….jpeg",
       Heading: "SPECIAL 6",
       features: [
         "6 Calls",
@@ -41,6 +46,7 @@ export default function Investment() {
     },
     {
        Price : "****",
+      imgx : "/tradingcrypto.jpeg",
       Heading: "BUDGET",
       features: [
         "4 Stocks to Be Shared",
@@ -64,12 +70,16 @@ export default function Investment() {
             <ServiceCards
               key={index}
               Price= {plan.Price}
+              imgx = {plan.imgx}
               Heading={plan.Heading}
               features={plan.features}
             />
           ))}
         </div>
       </div>
+       <h1 className=" text-4xl p md:text-7xl font-playfair text-primary font-bold text-center pt-8">
+        Performance Sheet
+      </h1>
 
       <Sheet />
     </div>

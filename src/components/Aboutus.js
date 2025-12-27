@@ -36,7 +36,7 @@ We are focused over deep research, discipline and maintain integrity to deliver 
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col md:items-center lg:flex-row justify-center md:justify-between items-center  gap-8  md:w-[90%] mx-11 lg:mx-auto">
+      <div className="flex flex-col md:items-center  lg:flex-row justify-center md:justify-between items-center  gap-8  md:w-[90%] mx-11 lg:mx-auto">
         {cards.map((card, index) => (
           <div
             key={index}

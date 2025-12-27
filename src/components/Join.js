@@ -66,7 +66,7 @@ export default function Join() {
   return (
     <div className=" relative lg:px-8">
 
-      <section className=" bg-opacity-85 h-fit   text-white py-3 md:py-10 px-6 text-center rounded-lg m-6">
+      <section className=" bg-opacity-85 h-fit z-40   text-white py-3 md:py-10 px-6 text-center rounded-lg m-6">
 
         <div className="flex justify-center z-40 relative">
           <h2 className="text-5xl   md:text-6xl lg:text-7xl xl:text-7xl w-fit font-playfair text-primary font-extrabold mb-4  z-10">Our Services</h2>
@@ -81,6 +81,8 @@ export default function Join() {
 
         </div>
       </section>
+
+     
     </div>
 
   )

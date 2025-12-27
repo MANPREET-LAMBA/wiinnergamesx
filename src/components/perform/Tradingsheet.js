@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Performance from "../servicepage/Performance";
 
 export default function Sheet() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const apiUrl = process.env.REACT_APP_API_URL;
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // Fetch all posts
   const fetchPosts = async () => {
@@ -12,6 +14,8 @@ export default function Sheet() {
 
     try {
       const res = await axios.get(`${apiUrl}api/posts`);
+      console.log(res.data);
+
       setPosts(res.data);
       setLoading(false);
     } catch (error) {
@@ -24,34 +28,47 @@ export default function Sheet() {
     fetchPosts();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    return (
+      <div className="w-full h-screen flex flex-col justify-center items-center px-4">
+        <p className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-center">
+          Loading blogs...
+        </p>
+      </div>
+    )
+  };
 
   return (
     <div className="flex flex-col  p-6 justify-start  gap-6">
-        <h1 className=" text-4xl md:text-7xl font-playfair text-primary font-bold text-center pt-5">
-        Performance Sheet
-      </h1>
+
       <div className=" flex flex-wrap justify-center gap-4">
         {posts
-        .filter((post) => post.category === "trading ") // <-- Filter condition
-        .map((post) => (
-          <div
-            key={post._id}
-            className="w-full md:w-3/12 h-auto border-2 border-primary flex justify-center items-center rounded-2xl bg-secondary hover:shadow-lg"
-          >
-            <div className="p-4 rounded-lg">
-              <img
-                src={post.imageUrl}
-                alt={post.category}
-                className="w-full h-fit object-cover rounded-lg"
-              />
+          .filter((post) => post.category === "trading") // <-- Filter condition
+          .map((post) => (
+            <div
+              key={post._id}
+              className="w-full md:w-3/12 h-auto border-2 bg-gradient-to-r from-pink-700 via-purple-700 to-sky-700 p-1 flex justify-center items-center rounded-xl bg-secondary hover:shadow-lg"
+              onClick={() => setSelectedImage(post.imageUrl)}>
+            
+              <div className="p-4 h-full flex items-center rounded-xl bg-white">
+                <img
+                  src={post.imageUrl}
+                  alt={post.category}
+                  className="w-full h-fit object-cover rounded-lg"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
 
-     
 
+  {/* 🔥 THIS is how ImagePreview is used */}
+      {selectedImage && (
+        <Performance
+          image={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
 
     </div>
   );

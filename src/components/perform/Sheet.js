@@ -29,13 +29,20 @@ export default function Sheet() {
 
    const [selectedImage, setSelectedImage] = useState(null);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    return(
+      <div className="w-full h-screen flex flex-col justify-center items-center px-4">
+  <p className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-center">
+    Loading blogs...
+  </p>
+</div>
+    )
+
+  }
 
   return (
     <div className="flex flex-col  p-6 justify-start  gap-6">
-      <h1 className=" text-4xl md:text-7xl font-playfair text-primary font-bold text-center pt-5">
-        Performance Sheet
-      </h1>
+     
       <div className=" flex flex-wrap justify-center gap-4">
         {posts
           .filter((post) => post.category === "investment") // <-- Filter condition
