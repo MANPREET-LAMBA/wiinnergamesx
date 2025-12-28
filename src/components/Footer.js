@@ -81,8 +81,8 @@ export default function Footer() {
           
 
           {/* === Column 2: Resources === */}
-          <div className=" flex flex-col items-center ">
-            <h3 className="text-2xl text-center lg:text-start  border-b-4 border-primary font-semibold mb-4">Resources</h3>
+          <div className=" flex flex-col lg:items-center px-5 md:px-0">
+            <h3 className="w-fit text-2xl text-start lg:text-start  border-b-4 border-primary font-semibold mb-4">Resources</h3>
 
             <ul className="space-y-2 text-xl">
               {resourcesLinks.map((link) => (
@@ -101,9 +101,9 @@ export default function Footer() {
 
 
 {/* === Column 1: Explore === */}
-          <div className="flex flex-col  items-center">
+          <div className="flex flex-col px-5 md:px-0  lg:items-center">
             <div>
-              <h3 className="  text-2xl text-center lg:text-start border-b-4 border-primary font-semibold  mb-4">Explore</h3>
+              <h3 className=" w-fit  text-2xl text-start lg:text-start border-b-4 border-primary font-semibold  mb-4">Explore</h3>
               
             <ul className="space-y-2 text-xl ">
               {exploreLinks.map((link) => (
