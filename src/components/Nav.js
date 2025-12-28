@@ -95,7 +95,7 @@ export default function Nav() {
           ${isMobileMenuOpen ? "flex p-4" : "hidden lg:flex"}
         `}
                 >
-                    <a href="/"><li className="hover:text-indigo-600 ">Home</li></a>
+                    <a href="/"><li className=" ">Home</li></a>
 
                     {/* Our Services */}
                     <li
@@ -124,7 +124,7 @@ export default function Nav() {
                                 {menuItems.map((item, idx) => (
                                     <li
                                         key={idx}
-                                        className="relative px-4 py-2 hover:bg-indigo-500"
+                                        className="relative px-4 py-2 "
                                         onMouseEnter={() => setActiveSubmenu(item.label)}
                                         onMouseLeave={() => setActiveSubmenu(null)}
                                     >
@@ -170,9 +170,9 @@ export default function Nav() {
                         )}
                     </li>
 
-                    <a href="/blogs"><li className="hover:text-indigo-600">Blog</li></a>
+                    <a href="/blogs"><li className="">Blog</li></a>
                     {/* <a href="#"><li className="hover:text-indigo-600">About Us</li></a> */}
-                    <a href="#"><li className="hover:text-indigo-600">Contact Us</li></a>
+                    <a href="#"><li className="">Contact Us</li></a>
                 </ul>
             </div>
            </div>
